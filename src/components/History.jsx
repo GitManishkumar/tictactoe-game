@@ -1,3 +1,5 @@
+//import { normalizePath } from "vite"
+
 const History=({history,moveTo,currentMove})=>{
   return <div className="history-wrapper">
     <ul className="history">
@@ -6,7 +8,7 @@ const History=({history,moveTo,currentMove})=>{
           <li key={index}>
             <button type="button" 
             className={`btn-move ${currentMove===index?'active':''}`}
-            onClick={()=>moveTo(index)}>
+           onClick={()=>moveTo(index)}>
             {index===0 ? "Got to game start":`Go to move #${index}`}
           </button>
           </li>
