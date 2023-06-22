@@ -1,5 +1,6 @@
 import React from "react"
-const StatusMessage=({isXnext,winner,squares})=>{
+const StatusMessage=({winner,gamingBoard})=>{
+  const {squares,isXnext}=gamingBoard
 
 const noMovesLeft=squares.every(squareValue=>squareValue!==null)
 
@@ -30,7 +31,7 @@ const noMovesLeft=squares.every(squareValue=>squareValue!==null)
 
   }
 
-  return <h2 className="status-messag">
+  return <h2 className="status-message">
     {renderdStatusMessage()}
     </h2>
 }
